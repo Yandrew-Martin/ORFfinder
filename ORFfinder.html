@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>ORF Finder</title>
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/orf_search.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/css/theme.default.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/css/theme.ice.min.css"/>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.widgets.js"></script>
+	<script type="text/javascript" src="js/ORFfinder.js"></script>
+</head>
+
+<body id="main">
+	<h1>ORF Finder</h1>
+	<form name="orf_search" id="orf_search" action="" autocomplete="off">	 
+		<textarea rows="10" cols="50" name="sequence" id="sequence">
+		</textarea>
+		<input name="submit" type="submit" id="submit" value="submit">
+	</form>
+    <section id='results'>
+        <p>
+            <span id='orf_count'>0</span> ORF(s) found.
+        </p>
+        <table  id="myTable" class="tablesorter">
+            <thead>
+            <tr>
+		<th>Orf ID</th>
+		<th>Start</th>
+		<th>End</th>
+		<th>Strand</th>
+		<th>Frame</th>
+		<th>Sequence Length</th>
+		<th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+                <!-- this will be filled in by javascript when there are results -->
+            </tbody>
+    </section>
+
+</body>
+</html>
